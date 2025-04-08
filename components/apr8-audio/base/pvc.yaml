@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  labels:
+    app.kubernetes.io/instance: apr8-audio
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: apr8-audio
+  name: apr8-audio
+spec:
+  accessModes:
+    - ReadWriteOnce
+  volumeMode: Filesystem
+  resources:
+    requests:
+      storage: 100Gi
